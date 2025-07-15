@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curiosidades - Demon Slayer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .acordeao {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #900;
+      padding: 10px;
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .item {
+      border-bottom: 1px solid crimson;
+    }
+    .titulo {
+      padding: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      background: #290000;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+    .titulo:hover {
+      background: crimson;
+      color: #111;
+    }
+    .conteudo {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      padding: 0 15px;
+      background: #330000;
+      font-size: 1em;
+      line-height: 1.5;
+    }
+    .conteudo.aberto {
+      padding: 15px;
+      max-height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Curiosidades sobre Demon Slayer</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="hashiras.html">Hashiras</a></li>
+        <li><a href="luas.html">Luas Superiores</a></li>
+        <li><a href="batalha.html">Batalha</a></li>
+        <li><a href="ranking.html">Ranking</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="curiosidades.html">Curiosidades</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="acordeao">
+      <div class="item">
+        <div class="titulo">A origem do nome Tanjiro</div>
+        <div class="conteudo">Tanjiro significa "homem da bondade" em japonês, refletindo sua personalidade gentil e determinada.</div>
+      </div>
+      <div class="item">
+        <div class="titulo">Nezuko como demônio único</div>
+        <div class="conteudo">Apesar de ser um demônio, Nezuko mantém parte da humanidade, resistindo à sede de sangue que caracteriza sua espécie.</div>
+      </div>
+      <div class="item">
+        <div class="titulo">Inspiração nas respirações</div>
+        <div class="conteudo">As técnicas de respiração são inspiradas em estilos tradicionais de artes marciais japonesas, cada uma com seu estilo e filosofia.</div>
+      </div>
+      <div class="item">
+        <div class="titulo">Popularidade mundial</div>
+        <div class="conteudo">Demon Slayer quebrou recordes no Japão e globalmente, tornando-se um dos animes/mangás mais vendidos da história recente.</div>
+      </div>
+      <div class="item">
+        <div class="titulo">Estilo visual único</div>
+        <div class="conteudo">O uso de cores vibrantes e contrastes sombrios na animação ajudou a definir o tom dramático e brutal da série.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto Demon Slayer © 2025 - Criado por Emanuel Szecko</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.titulo').forEach(titulo => {
+      titulo.addEventListener('click', () => {
+        const conteudo = titulo.nextElementSibling;
+        const aberto = conteudo.classList.contains('aberto');
+        if (aberto) {
+          conteudo.classList.remove('aberto');
+        } else {
+          // Fecha todos os abertos
+          document.querySelectorAll('.conteudo.aberto').forEach(c => c.classList.remove('aberto'));
+          conteudo.classList.add('aberto');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

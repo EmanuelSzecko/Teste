@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1752528739680" clover="3.2.0">
+  <project timestamp="1752528739680" name="All files">
+    <metrics statements="59" coveredstatements="52" conditionals="20" coveredconditionals="13" methods="17" coveredmethods="14" elements="96" coveredelements="79" complexity="0" loc="59" ncloc="59" packages="1" files="7" classes="7"/>
+    <file name="batalha.js" path="C:\Users\Danie\Downloads\demon-slayer-batalha\demon-slayer\src\batalha.js">
+      <metrics statements="10" coveredstatements="9" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="7" count="2" type="stmt"/>
+      <line num="9" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="10" count="0" type="stmt"/>
+      <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="17" count="2" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+    </file>
+    <file name="comentarios.js" path="C:\Users\Danie\Downloads\demon-slayer-batalha\demon-slayer\src\comentarios.js">
+      <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <line num="2" count="2" type="stmt"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="6" count="2" type="stmt"/>
+      <line num="7" count="2" type="stmt"/>
+      <line num="9" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+    </file>
+    <file name="curiosidades.js" path="C:\Users\Danie\Downloads\demon-slayer-batalha\demon-slayer\src\curiosidades.js">
+      <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="4"/>
+      <line num="2" count="3" type="stmt"/>
+      <line num="3" count="3" type="stmt"/>
+      <line num="4" count="6" type="stmt"/>
+      <line num="5" count="5" type="stmt"/>
+      <line num="6" count="5" type="cond" truecount="1" falsecount="1"/>
+      <line num="8" count="5" type="stmt"/>
+      <line num="10" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="13" count="4" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="16" count="4" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+    </file>
+    <file name="galeria.js" path="C:\Users\Danie\Downloads\demon-slayer-batalha\demon-slayer\src\galeria.js">
+      <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="4" methods="4" coveredmethods="4"/>
+      <line num="2" count="3" type="stmt"/>
+      <line num="3" count="3" type="stmt"/>
+      <line num="4" count="3" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="7" count="6" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="15" count="3" type="cond" truecount="3" falsecount="1"/>
+      <line num="16" count="3" type="stmt"/>
+      <line num="17" count="3" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+    </file>
+    <file name="index.js" path="C:\Users\Danie\Downloads\demon-slayer-batalha\demon-slayer\src\index.js">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+    </file>
+    <file name="luas.js" path="C:\Users\Danie\Downloads\demon-slayer-batalha\demon-slayer\src\luas.js">
+      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <line num="2" count="2" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="7" count="3" type="cond" truecount="1" falsecount="1"/>
+      <line num="8" count="3" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+    </file>
+    <file name="ranking.js" path="C:\Users\Danie\Downloads\demon-slayer-batalha\demon-slayer\src\ranking.js">
+      <metrics statements="6" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <line num="2" count="0" type="stmt"/>
+      <line num="5" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="10" count="0" type="stmt"/>
+      <line num="11" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Batalha - Demon Slayer</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Simulador de Batalha</h1>
+   <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="hashiras.html">Hashiras</a></li>
+        <li><a href="luas.html">Luas Superiores</a></li>
+        <li><a href="ranking.html">Ranking</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="curiosidades.html">Curiosidades</a></li>
+        <li><a href="comentarios.html">Comentários</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Simule uma batalha épica</h2>
+
+      <div class="batalha-selecao">
+        <div>
+          <label for="hashira">Escolha o Hashira:</label>
+          <select id="hashira">
+            <option>Giyu</option>
+            <option>Kyojuro</option>
+            <option>Tengen</option>
+            <option>Muichiro</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="lua">Escolha o Lua Superior:</label>
+          <select id="lua">
+            <option>Akaza</option>
+            <option>Doma</option>
+            <option>Kokushibo</option>
+            <option>Kaigaku</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="batalha-arena">
+        <div class="combatente">
+          <h3 id="nome-hashira">Hashira</h3>
+          <div class="vida">
+            <div id="barra-hashira" class="vida-barra"></div>
+          </div>
+        </div>
+
+        <div class="combatente">
+          <h3 id="nome-lua">Lua Superior</h3>
+          <div class="vida">
+            <div id="barra-lua" class="vida-barra"></div>
+          </div>
+        </div>
+      </div>
+
+      <button onclick="simularBatalha()">Atacar!</button>
+      <div id="resultado" class="batalha-resultado"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto Demon Slayer © 2025 - Criado por Emanuel Szecko</p>
+  </footer>
+
+  <script>
+    function simularBatalha() {
+      const hashira = document.getElementById('hashira').value;
+      const lua = document.getElementById('lua').value;
+
+      const vidaHashira = Math.floor(Math.random() * 100);
+      const vidaLua = Math.floor(Math.random() * 100);
+
+      document.getElementById('nome-hashira').innerText = hashira;
+      document.getElementById('nome-lua').innerText = lua;
+
+      const barraHashira = document.getElementById('barra-hashira');
+      const barraLua = document.getElementById('barra-lua');
+
+      barraHashira.style.width = vidaHashira + "%";
+      barraLua.style.width = vidaLua + "%";
+
+      barraHashira.style.backgroundColor = vidaHashira > vidaLua ? "limegreen" : "darkred";
+      barraLua.style.backgroundColor = vidaLua > vidaHashira ? "limegreen" : "darkred";
+
+      let resultado = "";
+      if (vidaHashira > vidaLua) {
+        resultado = `🔥 ${hashira} venceu a batalha!`;
+      } else if (vidaLua > vidaHashira) {
+        resultado = `💀 ${lua} esmagou o oponente!`;
+      } else {
+        resultado = `⚔️ Empate sangrento!`;
+      }
+
+      document.getElementById('resultado').innerHTML = `<h3>${hashira} vs ${lua}</h3><p>${resultado}</p>`;
+    }
+  </script>
+</body>
+</html>

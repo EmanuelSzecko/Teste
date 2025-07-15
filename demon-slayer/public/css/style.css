@@ -1,0 +1,303 @@
+/* RESET GERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d;
+  color: #f5f5f5;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(to right, #4d0000, #1a0000);
+  padding: 25px;
+  text-align: center;
+  border-bottom: 4px solid crimson;
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-size: 3em;
+  letter-spacing: 2px;
+  color: #ffcccc;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 10px 15px;
+}
+
+nav ul li a {
+  color: #f5f5f5;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: crimson;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* HERO / BANNER */
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(10, 0, 0, 0.7)), url('../assets/fundo-demonslayer.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  animation: fadeIn 2s ease-in;
+}
+
+.hero h2 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px #000;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  box-shadow: 0 0 10px crimson;
+}
+
+/* SECTION */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  animation: fadeInUp 1s ease;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid crimson;
+  padding-bottom: 5px;
+}
+
+/* GRID E CARDS */
+.grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 30px;
+}
+
+.card {
+  background: linear-gradient(to top, #1a1a1a, #2e0000);
+  border: 2px solid crimson;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 15px #900;
+  cursor: pointer;
+  animation: popIn 0.5s ease forwards;
+  transform: scale(0.95);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #290000;
+  box-shadow: 0 0 20px crimson;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* BATALHA */
+.batalha-resultado {
+  background-color: #1a1a1a;
+  padding: 25px;
+  border-left: 5px solid crimson;
+  margin-top: 25px;
+  animation: fadeInUp 1s ease;
+}
+
+button {
+  background-color: crimson;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+button:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  background-color: #111;
+  color: #999;
+  padding: 25px;
+  text-align: center;
+  margin-top: 50px;
+  border-top: 2px solid crimson;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* LISTAS */
+ul {
+  margin-top: 20px;
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+/* OL RANKING */
+ol {
+  margin-top: 20px;
+  padding-left: 25px;
+  font-size: 1.2em;
+}
+
+ol li {
+  margin: 10px 0;
+}
+
+/* MEDIA QUERY RESPONSIVO */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .hero h2 {
+    font-size: 2em;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  section {
+    padding: 20px 10px;
+  }
+}
+.batalha-selecao {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.batalha-arena {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.combatente {
+  width: 45%;
+  text-align: center;
+}
+
+.vida {
+  background-color: #333;
+  height: 20px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+  box-shadow: 0 0 10px #900;
+}
+
+.vida-barra {
+  height: 100%;
+  width: 0%;
+  background-color: crimson;
+  transition: width 1s ease-in-out;
+}
+.tabela-ranking {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+
+.tabela-ranking th, .tabela-ranking td {
+  border: 1px solid crimson;
+  padding: 12px;
+  text-align: center;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.tabela-ranking th {
+  background-color: #290000;
+  color: crimson;
+  font-weight: bold;
+}
+
+.tabela-ranking tr:hover {
+  background-color: #330000;
+  transition: 0.3s;
+}
+

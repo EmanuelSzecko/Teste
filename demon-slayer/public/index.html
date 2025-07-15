@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Demon Slayer - Início</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Demon Slayer</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="hashiras.html">Hashiras</a></li>
+        <li><a href="luas.html">Luas Superiores</a></li>
+        <li><a href="batalha.html">Batalha</a></li>
+        <li><a href="ranking.html">Ranking</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="curiosidades.html">Curiosidades</a></li>
+        <li><a href="comentarios.html">Comentários</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero brutal-hero">
+    <div class="overlay">
+      <h2>Bem-vindo ao mundo sangrento de Demon Slayer</h2>
+      <p>Explore os pilares da humanidade contra as forças demoníacas.</p>
+      <button id="explorar">Explorar</button>
+    </div>
+  </main>
+
+  <section id="destaques" class="grid">
+    <div class="card brutal-card">
+      <img src="assets/tanjiro.png" alt="Tanjiro">
+      <h3>Tanjiro Kamado</h3>
+      <p>O protagonista determinado com coração puro e cabeça dura.</p>
+    </div>
+    <div class="card brutal-card">
+      <img src="assets/nezuko.png" alt="Nezuko">
+      <h3>Nezuko Kamado</h3>
+      <p>Transformada em demônio, mas ainda humana por dentro.</p>
+    </div>
+    <div class="card brutal-card">
+      <img src="assets/inosuke.png" alt="Inosuke">
+      <h3>Inosuke Hashibira</h3>
+      <p>Feroz, selvagem e imprevisível. Caça demônios com cabeça de javali.</p>
+    </div>
+    <div class="card brutal-card">
+      <img src="assets/zenitsu.png" alt="Zenitsu">
+      <h3>Zenitsu Agatsuma</h3>
+      <p>Medroso, mas mortal quando desmaia. A lâmina do trovão.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Projeto Demon Slayer © 2025 - Criado por Emanuel Szecko</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.getElementById('explorar').addEventListener('click', () => {
+      document.getElementById('destaques').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sobre o Grupo - Demon Slayer</title>
+  <style>
+    /* RESET GERAL */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(to right, #4d0000, #1a0000);
+      padding: 25px;
+      text-align: center;
+      border-bottom: 4px solid crimson;
+      box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+    }
+
+    header h1 {
+      font-size: 3em;
+      letter-spacing: 2px;
+      color: #ffcccc;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 15px;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 10px 15px;
+    }
+
+    nav ul li a {
+      color: #f5f5f5;
+      font-weight: bold;
+      font-size: 1.1em;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      padding: 6px 12px;
+      border-radius: 5px;
+      display: block;
+    }
+
+    nav ul li a:hover {
+      background-color: crimson;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 40px auto 60px auto;
+      animation: fadeInUp 1s ease;
+      background: linear-gradient(to top, #1a1a1a, #2e0000);
+      border: 2px solid crimson;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #900;
+    }
+
+    section h2 {
+      font-size: 2.5em;
+      margin-bottom: 25px;
+      border-bottom: 2px solid crimson;
+      padding-bottom: 8px;
+      color: #ffcccc;
+      text-align: center;
+    }
+
+    section p {
+      font-size: 1.2em;
+      line-height: 1.5;
+      color: #ddd;
+      margin-bottom: 35px;
+      text-align: center;
+      text-shadow: 0 0 8px #660000;
+    }
+
+    .membros {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .membro {
+      background-color: #330000;
+      border: 2px solid crimson;
+      border-radius: 12px;
+      width: 180px;
+      padding: 15px;
+      box-shadow: 0 0 20px crimson;
+      transition: transform 0.3s ease;
+      text-align: center;
+      color: #fff;
+    }
+
+    .membro:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px #ff0000;
+    }
+
+    .membro img {
+      width: 100%;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ff0000;
+      margin-bottom: 12px;
+      box-shadow: 0 0 15px crimson;
+    }
+
+    .membro .nome {
+      font-weight: bold;
+      font-size: 1.3em;
+      margin-bottom: 5px;
+      text-shadow: 0 0 6px crimson;
+    }
+
+    .membro .funcao {
+      font-size: 1em;
+      color: #f0c0c0;
+      margin-bottom: 8px;
+    }
+
+    .links-pessoais a {
+      color: crimson;
+      font-weight: bold;
+      font-size: 1.1em;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .links-pessoais a:hover {
+      color: #ff6666;
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #111;
+      color: #999;
+      padding: 20px;
+      text-align: center;
+      border-top: 2px solid crimson;
+      width: 100%;
+    }
+
+    /* ANIMAÇÕES */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* RESPONSIVO */
+    @media screen and (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      section {
+        margin: 20px 10px 40px 10px;
+        padding: 20px 15px;
+      }
+      .membros {
+        flex-direction: column;
+        align-items: center;
+      }
+      .membro {
+        width: 80%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sobre o Nosso Grupo</h1>
+<nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="hashiras.html">Hashiras</a></li>
+        <li><a href="luas.html">Luas Superiores</a></li>
+        <li><a href="batalha.html">Batalha</a></li>
+        <li><a href="ranking.html">Ranking</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="curiosidades.html">Curiosidades</a></li>
+        <li><a href="comentarios.html">Comentários</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <p>
+      Este projeto foi desenvolvido com muito empenho pelo nosso grupo composto por Emanuel, Wesley e Gabriela. Cada um trouxe suas habilidades e contribuições para tornar este trabalho um sucesso na disciplina de Testes de Software.
+    </p>
+
+    <div class="membros">
+      <div class="membro">
+        <img src="fotos/emanuel.jpg" alt="Foto Emanuel" />
+        <div class="nome">Emanuel Szecko</div>
+        <div class="funcao">Desenvolvedor Frontend e Testes</div>
+        <div class="links-pessoais">
+          <a href="https://github.com/emanuel" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://instagram.com/emanuel" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+      <div class="membro">
+        <img src="fotos/wesley.jpg" alt="Foto Wesley" />
+        <div class="nome">Wesley</div>
+        <div class="funcao">Especialista em Testes Automatizados</div>
+        <div class="links-pessoais">
+          <a href="https://github.com/wesley" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://instagram.com/wesley" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+      <div class="membro">
+        <img src="fotos/gabrielle.jpg" alt="Foto Gabrielle" />
+        <div class="nome">Gabrielle</div>
+        <div class="funcao">Designer e QA</div>
+        <div class="links-pessoais">
+          <a href="https://github.com/gabrielle" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://instagram.com/gabrielle" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Demon Slayer - Trabalho Final de Testes de Software
+  </footer>
+</body>
+</html>

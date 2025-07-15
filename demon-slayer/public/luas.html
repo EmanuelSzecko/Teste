@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luas Superiores - Demon Slayer</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Luas Superiores</h1>
+<nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="hashiras.html">Hashiras</a></li>
+        <li><a href="batalha.html">Batalha</a></li>
+        <li><a href="ranking.html">Ranking</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="curiosidades.html">Curiosidades</a></li>
+        <li><a href="comentarios.html">Comentários</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Conheça os Demônios mais poderosos</h2>
+      <p>Clique nos nomes para revelar os poderes das Luas Superiores.</p>
+
+      <div class="grid" id="luas-container">
+        <!-- JS adiciona os cards -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto Demon Slayer © 2025 - Criado por Emanuel Szecko</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    const luas = [
+      {
+        nome: "Kokushibo",
+        imagem: "kokushibo.png",
+        habilidade: "Respiração da Lua, espadas demoníacas, regeneração absoluta.",
+      },
+      {
+        nome: "Doma",
+        imagem: "doma.png",
+        habilidade: "Gelo demoníaco, charme mental e absorção de almas.",
+      },
+      {
+        nome: "Akaza",
+        imagem: "akaza.png",
+        habilidade: "Combate corpo a corpo mortal, destruição e rastreamento de intenção.",
+      },
+      {
+        nome: "Kaigaku",
+        imagem: "kaigaku.png",
+        habilidade: "Eletricidade negra, variações corrompidas da Respiração do Trovão.",
+      },
+      {
+        nome: "Gyokko",
+        imagem: "gyokko.png",
+        habilidade: "Manipulação de vasos e invocação de criaturas grotescas.",
+      },
+      {
+        nome: "Hantengu",
+        imagem: "hantengu.png",
+        habilidade: "Divisão em várias personalidades com poderes únicos.",
+      }
+    ];
+
+    const container = document.getElementById('luas-container');
+
+    luas.forEach(lua => {
+      const card = document.createElement('div');
+      card.className = 'card brutal-card';
+      card.innerHTML = `
+        <img src="assets/${lua.imagem}" alt="${lua.nome}">
+        <h3 class="lua-nome" style="cursor:pointer">${lua.nome}</h3>
+        <p class="lua-habilidade" style="display:none"><strong>Poder:</strong> ${lua.habilidade}</p>
+      `;
+      card.querySelector('.lua-nome').addEventListener('click', () => {
+        const p = card.querySelector('.lua-habilidade');
+        p.style.display = p.style.display === 'none' ? 'block' : 'none';
+      });
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>

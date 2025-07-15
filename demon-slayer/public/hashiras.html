@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hashiras - Demon Slayer</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Hashiras</h1>
+<nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="luas.html">Luas Superiores</a></li>
+        <li><a href="batalha.html">Batalha</a></li>
+        <li><a href="ranking.html">Ranking</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="curiosidades.html">Curiosidades</a></li>
+        <li><a href="comentarios.html">Comentários</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Conheça os Hashiras</h2>
+      <label for="filtro">Filtrar por Respiração:</label>
+      <select id="filtro">
+        <option value="todos">Todos</option>
+        <option value="água">Água</option>
+        <option value="fogo">Fogo</option>
+        <option value="som">Som</option>
+        <option value="inseto">Inseto</option>
+        <option value="amor">Amor</option>
+        <option value="rocha">Rocha</option>
+        <option value="serpente">Serpente</option>
+        <option value="névoa">Névoa</option>
+        <option value="vento">Vento</option>
+      </select>
+
+      <div class="grid" id="lista-hashiras">
+        <!-- Cards dos Hashiras serão inseridos aqui via JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto Demon Slayer © 2025 - Criado por Emanuel Szecko</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    const hashiras = [
+      { nome: 'Giyu Tomioka', respiracao: 'água', imagem: 'giyu.png', descricao: 'Silencioso e sério, mestre da Respiração da Água.' },
+      { nome: 'Kyojuro Rengoku', respiracao: 'fogo', imagem: 'rengoku.png', descricao: 'Apaixonado pela justiça, representa as Chamas!' },
+      { nome: 'Shinobu Kocho', respiracao: 'inseto', imagem: 'shinobu.png', descricao: 'Pequena, sorridente, mas mortal com venenos.' },
+      { nome: 'Tengen Uzui', respiracao: 'som', imagem: 'tengen.png', descricao: 'Excêntrico e explosivo, domina o som em batalha.' },
+      { nome: 'Muichiro Tokito', respiracao: 'névoa', imagem: 'muichiro.png', descricao: 'Gênio esquecido, envolto em névoa e solidão.' },
+      { nome: 'Mitsuri Kanroji', respiracao: 'amor', imagem: 'mitsuri.png', descricao: 'Amorosa e extremamente poderosa!' },
+      { nome: 'Gyomei Himejima', respiracao: 'rocha', imagem: 'gyomei.png', descricao: 'Cego e gentil, mas é o mais forte entre todos.' },
+      { nome: 'Sanemi Shinazugawa', respiracao: 'vento', imagem: 'sanemi.png', descricao: 'Impulsivo e violento, mas justo e protetor.' },
+      { nome: 'Obanai Iguro', respiracao: 'serpente', imagem: 'obanai.png', descricao: 'Misterioso e firme em seus princípios.' }
+    ];
+
+    const lista = document.getElementById('lista-hashiras');
+    const filtro = document.getElementById('filtro');
+
+    function mostrarHashiras(filtroRespiracao) {
+      lista.innerHTML = '';
+      hashiras
+        .filter(h => filtroRespiracao === 'todos' || h.respiracao === filtroRespiracao)
+        .forEach(h => {
+          const card = document.createElement('div');
+          card.className = 'card brutal-card';
+          card.innerHTML = `
+            <img src="assets/${h.imagem}" alt="${h.nome}">
+            <h3>${h.nome}</h3>
+            <p><strong>Respiração:</strong> ${h.respiracao.charAt(0).toUpperCase() + h.respiracao.slice(1)}</p>
+            <p>${h.descricao}</p>
+          `;
+          lista.appendChild(card);
+        });
+    }
+
+    filtro.addEventListener('change', () => {
+      mostrarHashiras(filtro.value);
+    });
+
+    // Inicializa com todos
+    mostrarHashiras('todos');
+  </script>
+</body>
+</html>

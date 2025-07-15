@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ranking de Personagens - Demon Slayer</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Ranking de Poder</h1>
+<nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="hashiras.html">Hashiras</a></li>
+        <li><a href="luas.html">Luas Superiores</a></li>
+        <li><a href="batalha.html">Batalha</a></li>
+        <li><a href="ranking.html">Ranking</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="curiosidades.html">Curiosidades</a></li>
+        <li><a href="comentarios.html">Comentários</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Top 10 Personagens Mais Fortes</h2>
+      <button onclick="ordenarRanking()">Ordenar por Força 🔽</button>
+      <table id="tabela-ranking" class="tabela-ranking">
+        <thead>
+          <tr>
+            <th>Posição</th>
+            <th>Nome</th>
+            <th>Força</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JS vai preencher -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto Demon Slayer © 2025 - Criado por Emanuel Szecko</p>
+  </footer>
+
+  <script>
+    const personagens = [
+      { nome: "Kokushibo", forca: 98 },
+      { nome: "Gyomei Himejima", forca: 95 },
+      { nome: "Doma", forca: 92 },
+      { nome: "Akaza", forca: 89 },
+      { nome: "Kyojuro Rengoku", forca: 85 },
+      { nome: "Giyu Tomioka", forca: 83 },
+      { nome: "Sanemi Shinazugawa", forca: 80 },
+      { nome: "Tengen Uzui", forca: 78 },
+      { nome: "Tanjiro Kamado", forca: 75 },
+      { nome: "Muichiro Tokito", forca: 73 }
+    ];
+
+    let crescente = false;
+
+    function preencherTabela() {
+      const corpo = document.querySelector('#tabela-ranking tbody');
+      corpo.innerHTML = "";
+
+      personagens.forEach((p, i) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${i + 1}º</td>
+          <td>${p.nome}</td>
+          <td>${p.forca}</td>
+        `;
+        corpo.appendChild(tr);
+      });
+    }
+
+    function ordenarRanking() {
+      personagens.sort((a, b) => crescente ? a.forca - b.forca : b.forca - a.forca);
+      crescente = !crescente;
+      preencherTabela();
+    }
+
+    preencherTabela();
+  </script>
+</body>
+</html>

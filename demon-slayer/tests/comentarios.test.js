@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom
- */
-
 const { fireEvent } = require("@testing-library/dom");
 require("@testing-library/jest-dom");
 const { initComentarios } = require("../src/comentarios");

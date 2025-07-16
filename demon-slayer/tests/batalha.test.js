@@ -9,7 +9,7 @@ describe("Função simularBatalha", () => {
   });
 
   test("Deve retornar empate quando vidas forem iguais", () => {
-    jest.spyOn(Math, "random").mockReturnValue(0.5); // força empate
+    jest.spyOn(Math, "random").mockReturnValue(0.5); 
     const resultado = simularBatalha("Rengoku", "Akaza");
     expect(resultado.resultado).toBe("Empate sangrento!");
     Math.random.mockRestore();

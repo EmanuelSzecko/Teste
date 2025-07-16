@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom
- */
-
 const { fireEvent } = require("@testing-library/dom");
 require("@testing-library/jest-dom");
 const { initGaleria } = require("../src/galeria");
@@ -44,8 +40,8 @@ describe("Funcionalidade da Galeria de Imagens", () => {
     const imagemPrincipal = document.querySelector(".imagem-principal");
     const botaoZoom = document.querySelector(".botao-zoom");
 
-    fireEvent.click(botaoZoom); // adiciona
-    fireEvent.click(botaoZoom); // remove
+    fireEvent.click(botaoZoom)
+    fireEvent.click(botaoZoom);
 
     expect(imagemPrincipal).not.toHaveClass("zoom");
   });

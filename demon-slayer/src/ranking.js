@@ -1,4 +1,3 @@
-// ranking.js (versão do site)
 let crescente = false;
 
 export function ordenarRanking(lista) {

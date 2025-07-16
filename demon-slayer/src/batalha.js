@@ -1,6 +1,5 @@
-// Função pura que simula a batalha e retorna o vencedor
 function simularBatalha(hashira, lua) {
-  // Gera vida random para exemplo (para teste, pode ser mockado)
+
   const vidaHashira = Math.floor(Math.random() * 100);
   const vidaLua = Math.floor(Math.random() * 100);
 
@@ -17,5 +16,4 @@ function simularBatalha(hashira, lua) {
   return { vidaHashira, vidaLua, resultado };
 }
 
-// Exporta para usar em testes
 module.exports = { simularBatalha };

@@ -1,5 +1,3 @@
-// tests/ranking.test.js
-
 function ordenarRankingTeste(lista, modo = "decrescente") {
   if (modo === "crescente") {
     return [...lista].sort((a, b) => a.forca - b.forca);

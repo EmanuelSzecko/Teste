@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom
- */
-
 const { fireEvent } = require("@testing-library/dom");
 require("@testing-library/jest-dom");
 const { initLuas } = require("../src/luas");
@@ -30,8 +26,8 @@ describe("Mostrar poderes dos Luas Superiores", () => {
     const botao = document.querySelector(".botao-poder");
     const poderes = document.querySelector(".poderes");
 
-    fireEvent.click(botao); // mostra
-    fireEvent.click(botao); // esconde
+    fireEvent.click(botao);
+    fireEvent.click(botao);
 
     expect(poderes).not.toHaveClass("visivel");
   });

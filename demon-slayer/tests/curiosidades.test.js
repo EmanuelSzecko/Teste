@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom
- */
-
 const { fireEvent } = require("@testing-library/dom");
 require("@testing-library/jest-dom");
 const { initCuriosidades } = require("../src/curiosidades");
@@ -38,8 +34,8 @@ describe("Comportamento do acordeão em Curiosidades", () => {
     const conteudo1 = titulos[0].nextElementSibling;
     const conteudo2 = titulos[1].nextElementSibling;
 
-    fireEvent.click(titulos[0]); // abre 1
-    fireEvent.click(titulos[1]); // abre 2, deve fechar 1
+    fireEvent.click(titulos[0]);
+    fireEvent.click(titulos[1]); 
 
     expect(conteudo1).not.toHaveClass("aberto");
     expect(conteudo2).toHaveClass("aberto");
@@ -49,8 +45,8 @@ describe("Comportamento do acordeão em Curiosidades", () => {
     const titulo = document.querySelector(".titulo");
     const conteudo = titulo.nextElementSibling;
 
-    fireEvent.click(titulo); // abre
-    fireEvent.click(titulo); // fecha
+    fireEvent.click(titulo);
+    fireEvent.click(titulo);
 
     expect(conteudo).not.toHaveClass("aberto");
   });
